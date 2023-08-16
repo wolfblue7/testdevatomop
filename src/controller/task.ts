@@ -8,7 +8,7 @@ export const getTasks = async( req:Request, res: Response) => {
     const allTask = await tasks.getTasks();        
 
         if((allTask).length === 0){
-            res.status(200).json({
+            res.status(404).json({
                 msg : 'No se encontraron registros'
             });
         } 
@@ -34,7 +34,7 @@ export const postTask = async( req: Request, res: Response) => {
     
     newRegistry.newTask();
     
-    res.status(200).json({
+    res.status(201).json({
         msg : 'Se ha registrado exitosamente'
     });
         
@@ -48,7 +48,10 @@ export const putTask = async( req: Request, res: Response) => {
     const update = new GenerateTask(titulo, descripcion, estado);
     update.uptadeTask(id);
 
-    res.status(200).json('Registro actualizado');
+    res.status(201).json(
+        {
+        msg: 'Registro actualizado'
+        });
         
     
 }

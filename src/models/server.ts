@@ -6,7 +6,7 @@ import cors from 'cors';
 
 class Server {
 
-    private app: Application;
+    public app: Application;
     private port: string;
     private apiPaths = {
         tasks: '/api/tasks'
@@ -32,8 +32,7 @@ class Server {
         //Lectura del body
         this.app.use( express.json() );
 
-        //Carpeta publica
-        //this.app.use(express.static('public'));
+       
     }
 
 
