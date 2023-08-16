@@ -23,3 +23,6 @@ Jest
 
 ### Notas 
 El modelo escogido es un modelo MVC, lo escogi por ser un modelo donde he tenido mas experiencia y al ser uno de los mas utilizados para realizar proyectos escalables.
+
+
+### Se incluyen pruebas con Jest en la carpeta coverage estan las evidencias de funcionamiento de las API
