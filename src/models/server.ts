@@ -32,6 +32,9 @@ class Server {
         //Lectura del body
         this.app.use( express.json() );
 
+        //Carpeta publica
+        this.app.use(express.static('public'));
+
        
     }
 
