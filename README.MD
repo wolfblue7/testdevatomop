@@ -12,6 +12,10 @@ Se crearon 5 endpoint:
 
 5- Delete /tasks para eliminar una tarea, igualmente se evalua si el id existe antes de elimnarse.
 
+#### URL de la app desplegada online
+
+https://tasks-services.onrender.com/
+
 ## Tecnologias usadas
 Typescript
 
