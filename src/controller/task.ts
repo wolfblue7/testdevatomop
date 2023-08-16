@@ -13,7 +13,10 @@ export const getTasks = async( req:Request, res: Response) => {
             });
         } 
 
-        res.status(200).json(allTask);
+        res.status(200).json(
+            {
+                data:allTask
+            });
 
      
 }
@@ -24,7 +27,13 @@ export const getTask = async( req: Request, res: Response) => {
     const tasks = new GenerateTask();
     const oneTask = await tasks.oneTask(id);
 
-    res.send(oneTask);
+    
+
+    res.status(200).json({
+        data: oneTask
+        
+    });
+   
  
 }
 
@@ -47,10 +56,15 @@ export const putTask = async( req: Request, res: Response) => {
 
     const update = new GenerateTask(titulo, descripcion, estado);
     update.uptadeTask(id);
-
-    res.status(201).json(
+    
+    res.status(200).json(
         {
-        msg: 'Registro actualizado'
+        msg: 'Registro actualizado',
+        data: {
+            titulo,
+            descripcion,
+            estado
+        }
         });
         
     
@@ -63,5 +77,7 @@ export const deleteTask = async( req: Request, res: Response) => {
     del.deleteTask(id);
     
         
-    res.status(200).json('Registro eliminado');
+    res.status(200).json({
+        msg:'Registro eliminado'
+    });
 }

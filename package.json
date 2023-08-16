@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "cross-env NODE_ENV=test jest"
+    "test": "cross-env NODE_ENV=test jest --coverage"
   },
   "keywords": [],
   "author": "",
@@ -37,6 +37,7 @@
       "/dist/"
     ],
     "testTimeout": 9000,
-    "roots": ["<rootDir>/src"]
+    "roots": ["<rootDir>/src"],
+    "coverageReporters":["json","html"]
   }
 }
